@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react'
 import Login from './components/Login'
 import InfoPage from './components/Info_Page'
+import InformationPage from './components/InformationPage';
 import { Container, Col, Row, Card } from 'react-bootstrap'
 import axios from 'axios'
 
@@ -35,11 +36,11 @@ function App() {
 
   return (
   <div className="wrapper"> 
-    <Container>
+  <InformationPage/>
+    {/* <Container>
       <Row className="justify-content-center pt-5">
         <Col>
           <Card className="pt-5">
-            {/* may need to change value below */}
             <Login addUser={ AddUserList }/> 
             { users.map((user, index) => (
               <InfoPage key={ user.id } id={ user.id } username={ user.username } email={ user.email } password={ user.password }/>
@@ -47,7 +48,7 @@ function App() {
           </Card>
         </Col>
       </Row>
-    </Container>
+    </Container> */}
   </div>
   );
 }
